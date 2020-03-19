@@ -1,5 +1,5 @@
 # Series
-= 0.01 + 0.002 + 0.0003 + 0.00004 + ...
+$= 0.01 + 0.002 + 0.0003 + 0.00004 + ...$
 
 # Requisites
 Written and tested with Python 3.8.1.
