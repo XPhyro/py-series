@@ -22,7 +22,7 @@ n = mp.dps * 10
 s = mpf(0)
 
 # Time is obtained twice not to interfere with the actual timing of the summation.
-print(f"Initiated the sumation on {datetime.datetime.now()}.\nSumming...")
+print(f"Initiated the summation on {datetime.datetime.now()}.\nSumming...")
 
 t0 = time.time()
 
