@@ -36,7 +36,7 @@ print(f"Completed the summation on {datetime.datetime.fromtimestamp(t1)}.\nWriti
 s = str(s)
 
 with open("sum", "w+") as f:
-    f.write(f"Time started\t{t0}\nTime finished\t{t1}\nSum (=0.01+0.002+0.0003+...)\t")
+    f.write(f"Time started\t{t0}\nTime finished\t{t1}\nDecimal points limit\t{mp.dps}\nTerms computed\t{n}\nSum (=0.01+0.002+0.0003+...)\t")
     for i in s:
         f.write(i)
     f.write("\n")
