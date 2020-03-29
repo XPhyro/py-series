@@ -4,19 +4,13 @@
 from mpmath import *
 import time
 import datetime
+import input_helper as ih
 
 MIN_DPS = 4
 
-while True:
-    s = input(f"To how many decimal points should the sum be calculated? (min={MIN_DPS})\n> ")
-    try:
-        s = int(s)
-    except:
-        continue
-    if s >= MIN_DPS:
-        mp.dps = s
-        break
+s = ih.get_int_rng("To how many decimal points should the sum be calculated? (min={MIND_DPS})", low=MIN_DPS)
 
+mp.dps = s
 n = mp.dps * 10
 
 s = mpf(0)
