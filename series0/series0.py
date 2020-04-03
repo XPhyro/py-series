@@ -8,7 +8,10 @@ import input_helper as ih
 
 MIN_DPS = 4
 
-s = ih.get_int_rng("To how many decimal points should the sum be calculated? (min={MIND_DPS})", low=MIN_DPS)
+s = ih.get_int_rng(
+    "To how many decimal points should the sum be calculated? (min={MIND_DPS})",
+    low=MIN_DPS,
+)
 
 mp.mp.dps = s
 n = mp.mp.dps * 10
@@ -25,12 +28,16 @@ for i in range(n):
 
 t1 = time.time()
 
-print(f"Completed the summation on {datetime.datetime.fromtimestamp(t1)}.\nWriting the results to the file \"sum\".")
+print(
+    f'Completed the summation on {datetime.datetime.fromtimestamp(t1)}.\nWriting the results to the file "sum".'
+)
 
 s = str(s)
 
 with open("sum", "w+") as f:
-    f.write(f"Time started\t{t0}\nTime finished\t{t1}\nDecimal points limit\t{mp.dps}\nTerms computed\t{n}\nSum (=0.01+0.002+0.0003+...)\t")
+    f.write(
+        f"Time started\t{t0}\nTime finished\t{t1}\nDecimal points limit\t{mp.dps}\nTerms computed\t{n}\nSum (=0.01+0.002+0.0003+...)\t"
+    )
     for i in s:
         f.write(i)
     f.write("\n")
